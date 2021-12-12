@@ -37,18 +37,18 @@ async function postSuccessfulLogIn() : Promise<ISuccessfulLogIn> {
       body: JSON.stringify({ email: 'peter@klaven', error: 'Missing password' })
     };
 
-  async function postSuccessfulRegistr() : Promise<ISuccessfulLogIn> {
-    const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: 'eve.holt@reqres.in', password: 'pistol' })
-    };
+    async function postSuccessfulRegistr() : Promise<ISuccessfulLogIn> {
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: 'eve.holt@reqres.in', password: 'pistol' })
+      };
 
-  async function postUnsuccessfulRegistr() : Promise<IUnsuccessfulLogIn> {
-    const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: 'sydney@fife', error: 'Missing password' })
-    };
+      async function postUnsuccessfulRegistr() : Promise<IUnsuccessfulLogIn> {
+        const requestOptions = {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: 'sydney@fife', error: 'Missing password' })
+        };
 
-export default AuthComponent;
+        export default AuthComponent;
