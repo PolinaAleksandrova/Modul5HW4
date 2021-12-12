@@ -13,10 +13,9 @@ interface IUnsuccessfulLogIn {
 interface ILogInProps {
   title: string;
   description: string;
-
 }
 
-const ListItem = (props: IListItemProps) => (
+const ListItem = (props: ILogInProps) => (
   <Card as="li"
   <div>{props.title}</div>
   {props.description}
@@ -51,5 +50,5 @@ async function postSuccessfulLogIn() : Promise<ISuccessfulLogIn> {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: 'sydney@fife', error: 'Missing password' })
     };
-    
+
 export default AuthComponent;

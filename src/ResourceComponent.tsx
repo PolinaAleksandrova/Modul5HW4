@@ -16,5 +16,17 @@ interface IResource {
    total_pages: number;
   }
 
+  interface IResourceProps {
+  title: string;
+  description: string;
+}
+
+  const Cards = (props: IResourceProps) => (
+    <Card as="li"
+    <div>{props.title}</div>
+    {props.description}
+    </div>
+    </Card>
+  );
 
 export default ResourceComponent;
